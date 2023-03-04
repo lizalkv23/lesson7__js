@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>lesson 7</title>
+  </head>
+
+  <body>
+    <h1 style="color: rgb(4, 37, 67); font-size: 20px">
+      Створити функцію, яка за номером місяця повертає його назву.
+    </h1>
+    <script>
+      function isMonthName(month) {
+        let result
+        switch (month) {
+          case 1:
+            result = `Январь`
+            break
+          case 2:
+            result = `Февраль`
+            break
+          case 3:
+            result = `Март`
+            break
+          case 4:
+            result = `Апрель`
+            break
+          case 5:
+            result = `Май`
+            break
+          case 6:
+            result = `Июнь`
+            break
+          case 7:
+            result = `Июль`
+            break
+          case 8:
+            result = `Август`
+            break
+          case 9:
+            result = `Сентябрь`
+            break
+          case 10:
+            result = `Октябрь`
+            break
+          case 11:
+            result = `Ноябрь`
+            break
+          default:
+            result = `Декабрь`
+            break
+        }
+        return result
+      }
+      const userNumberMonth = parseInt(
+        prompt(`Введите номер месяца, и мы узнаем как он называется`)
+      )
+      const monthName = isMonthName(userNumberMonth)
+      document.write(monthName)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>lesson 7</title>
+  </head>
+
+  <body>
+    <h1 style="color: rgb(4, 37, 67); font-size: 20px">
+      Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день
+      робочим.
+    </h1>
+    <script>
+      function isWorkDay(dayNumber) {
+        return 1 < userNumberDay && userNumberDay <= 5
+      }
+      const userNumberDay = parseInt(
+        prompt(`Введите номер дня и мы узнаем являеться ли он рабочим`)
+      )
+      if (isWorkDay(userNumberDay)) {
+        document.write(`День рабочий`)
+      } else document.write(`Выходной`)
+    </script>
+  </body>
+</html>

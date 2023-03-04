@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>lesson 7</title>
+  </head>
+
+  <body>
+    <h1 style="color: rgb(4, 37, 67); font-size: 20px">
+      Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька
+      результатів: кількість парних, кількість додатних, кількість більших за
+      100.
+    </h1>
+    <script>
+      function getOperationsWithNumbers(num1, num2, num3) {
+        let count1 = 0
+        let count2 = 0
+        let count3 = 0
+        if (userNumber1 % 2 === 0) count1++
+        if (userNumber2 % 2 === 0) count1++
+        if (userNumber3 % 2 === 0) count1++
+
+        if (userNumber1 > 0) count2++
+        if (userNumber2 > 0) count2++
+        if (userNumber3 > 0) count2++
+
+        if (userNumber1 > 100) count3++
+        if (userNumber2 > 100) count3++
+        if (userNumber3 > 100) count3++
+        return [
+          `Количество парных чисел =${count1},<br> Количество чисел больше нуля = ${count2}, <br> Количество чисел больше 100 = ${count3}`,
+        ]
+      }
+      const userNumber1 = parseInt(prompt(`Первое число`))
+      const userNumber2 = parseInt(prompt(`Второе число`))
+      const userNumber3 = parseInt(prompt(`Третье число`))
+      const result = getOperationsWithNumbers()
+      document.write(`<div>
+   <p>Введеные вами числа: Первое = ${userNumber1}, Второе = ${userNumber2}, Третье =  ${userNumber3}</p>
+   <p> ${result}</p>
+</div>`)
+    </script>
+  </body>
+</html>

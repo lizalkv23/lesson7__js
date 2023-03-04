@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>lesson 7</title>
+  </head>
+
+  <body>
+    <h1 style="color: rgb(4, 37, 67); font-size: 20px">
+      Створити окремі функції, які для 4 чисел знаходять: 1.суму; 2.добуток;
+      3.середнє арифметичне; 4.мінімальне значення.
+    </h1>
+    <script>
+      function getSum(a, b, c, d) {
+        return a + b + c + d
+      }
+      function getIncrease(a, b, c, d) {
+        return a * b * c * d
+      }
+      function getArithmeticMean(a, b, c, d) {
+        return (a + b + c + d) / 4
+      }
+      function getMinNumber(a, b, c, d) {
+        let numberMin = a
+        if (b < numberMin) {
+          numberMin = b
+        }
+        if (c < numberMin) {
+          numberMin = c
+        }
+        if (d < numberMin) {
+          numberMin = d
+        }
+        return numberMin
+      }
+      const userNumberOne = parseInt(prompt(`Введите первое число `))
+      const userNumberTwo = parseInt(prompt(`Введите второе число `))
+      const userNumberThree = parseInt(prompt(`Введите третье число `))
+      const userNumberFour = parseInt(prompt(`Введите четвертое число `))
+
+      const sum = getSum(
+        userNumberOne,
+        userNumberTwo,
+        userNumberThree,
+        userNumberFour
+      )
+      const increase = getIncrease(
+        userNumberOne,
+        userNumberTwo,
+        userNumberThree,
+        userNumberFour
+      )
+      const arithmeticMean = getArithmeticMean(
+        userNumberOne,
+        userNumberTwo,
+        userNumberThree,
+        userNumberFour
+      )
+      const minNumber = getMinNumber(
+        userNumberOne,
+        userNumberTwo,
+        userNumberThree,
+        userNumberFour
+      )
+      document.write(`<div>
+         <div>Вы ввели  <p>Первое число =${userNumberOne}<br> Второе число = ${userNumberTwo} <br> Третье число= ${userNumberThree} <br> Четвертое число = ${userNumberFour} </p></div>
+         <p>Сумма чисел = ${sum}</p>
+         <p>Умножение = ${increase}</p>
+         <p>Среднее арифметическое = ${arithmeticMean}</p>
+         <p>Минимальное значение = ${minNumber}</p></div> `)
+    </script>
+  </body>
+</html>

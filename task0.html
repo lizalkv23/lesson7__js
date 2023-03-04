@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>lesson 7</title>
+  </head>
+
+  <body>
+    <h1 style="color: rgb(4, 37, 67); font-size: 20px">
+      Створити функцію, яка за номером місяця повертає пору року, до якої
+      відноситься цей місяць.
+    </h1>
+    <script>
+      function isTimeOfYear(timeOfYear) {
+        let result
+        switch (timeOfYear) {
+          case 1:
+          case 2:
+          case 12:
+            result = `Зима`
+            break
+          case 3:
+          case 4:
+          case 5:
+            result = `Весна`
+            break
+          case 6:
+          case 7:
+          case 8:
+            result = `Лето`
+            break
+          case 9:
+          case 10:
+          case 11:
+            result = `Осень`
+            break
+        }
+        return result
+      }
+      const userNumberMonth = parseInt(
+        prompt(
+          `Введите номер месяца, и мы узнаем к какой поре года он относиться`
+        )
+      )
+      const timeOfYear = isTimeOfYear(userNumberMonth)
+      document.write(timeOfYear)
+    </script>
+  </body>
+</html>

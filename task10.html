@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>lesson 7</title>
+  </head>
+
+  <body>
+    <h1 style="color: rgb(4, 37, 67); font-size: 20px">
+      Дано покази температур (довільна кількість). Розробити функцію, яка
+      дозволить знайти середнє значення для додатних показів температури.
+    </h1>
+    <script>
+      let averageAmount
+      let userTemperatureIndicators
+      let count = 0
+
+      function getAverageAmount(number) {
+        let i
+        for (i = 1; i <= userQuantityTemperatureIndicators; i++) {
+          userTemperatureIndicators = parseInt(
+            prompt(
+              `Введите температуру, мы будем вычеслять из введеных вами плюсовых показателей`
+            )
+          )
+          document.write(`<div>Вы ввели = ${userTemperatureIndicators}</div>`)
+          if (userTemperatureIndicators > 0) {
+            count += userTemperatureIndicators
+          } else if (userTemperatureIndicators < 0) {
+            i--
+            continue
+          }
+        }
+        return (averageAmount = count / (i - 1))
+      }
+      const userQuantityTemperatureIndicators = parseInt(
+        prompt(
+          `Количество показателей из которых вы хотите узнать среднее значение плюсовых температур`
+        )
+      )
+      const result = getAverageAmount(averageAmount)
+      document.write(
+        `<div>Среднее значение из ваших ${userQuantityTemperatureIndicators} плюсовых температур = ${result.toFixed(
+          1
+        )}</div>`
+      )
+    </script>
+  </body>
+</html>

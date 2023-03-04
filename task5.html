@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>lesson 7</title>
+  </head>
+
+  <body>
+    <h1 style="color: rgb(4, 37, 67); font-size: 20px">
+      Створити окремі функції, які переводять: Сантиметри у дюйми; Кілограми у
+      фунти; Кілометри у милі.
+    </h1>
+    <script>
+      function getConvertCentimeters(count) {
+        return count * 0, 393701
+      }
+      function getConvertKilograms(count) {
+        return count / 0, 453592
+      }
+      function getConvertKilometers(count) {
+        return count * 0, 621371
+      }
+      const userNumCentimeters = parseInt(
+        prompt(`Введите сантиметры, мы переведем их в дюймы`)
+      )
+      const userNumKilograms = parseInt(
+        prompt(`Введите килограммы, мы переведем их в фунты`)
+      )
+      const userNumKilometers = parseInt(
+        prompt(`Введите километры, мы переведем их в мили`)
+      )
+      const convertCentimeters = getConvertCentimeters(userNumCentimeters)
+      const convertKilograms = getConvertKilograms(userNumKilograms)
+      const convertKilometers = getConvertKilometers(userNumKilometers)
+      document.write(`<div>
+         <div>Вы ввели  <p>Сантиметры =${userNumCentimeters}<br> Килограммы = ${userNumKilograms} <br> Километры= ${userNumKilometers}</p></div>
+         <p>Дюймы = ${convertCentimeters.toFixed(2)}</p>
+         <p>Фунты = ${convertKilograms.toFixed(2)}</p>
+         <p>Мили = ${convertKilometers.toFixed(2)}</p></div> `)
+    </script>
+  </body>
+</html>

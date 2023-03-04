@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>lesson 7</title>
+  </head>
+
+  <body>
+    <h1 style="color: rgb(4, 37, 67); font-size: 20px">
+      Створити функцію, яка випадковим чином виводить на екран одне із 4
+      зображень (шляхи до зображень передаються у функцію)
+    </h1>
+    <script>
+      function isImagesPreview(number) {
+        return number
+      }
+      const randomNumberImages = Math.floor(Math.random() * 4)
+      const result = isImagesPreview(randomNumberImages)
+      document.write(`<img src="img/${result}.png" alt="">`)
+    </script>
+  </body>
+</html>
